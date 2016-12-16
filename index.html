@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+        <title> Web Intro - Final </title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link href="custom.css" rel="stylesheet">
+    </head>
+
+<body>
+
+<main>
+
+<div id="allRecords">
+<h3> Records </h3>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th> Modify </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+        <td> <button class="btn btn-xs btn-danger"> Delete </button> </td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+        <td> <button class="btn btn-xs btn-danger"> Delete </button> </td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+        <td> <button class="btn btn-xs btn-danger"> Delete </button> </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+<div id="addRecords">
+<h3> Add Records </h3>
+<form>
+  <div class="form-group">
+    <label for="email">Firstname:</label>
+    <input type="text" class="form-control" id="firstname">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Lastname:</label>
+    <input type="text" class="form-control" id="lastname">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Email:</label>
+    <input type="email" class="form-control" id="email">
+  </div>
+  <button type="submit" class="btn btn-xs btn-success" id="add"> Add </button>
+</form>
+      
+</div>
+
+</main>
+<script src="action.js"> </script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
