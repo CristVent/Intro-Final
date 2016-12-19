@@ -7,14 +7,16 @@ var button = document.getElementById("add"),
 
 var allRecords = [];
 
-var Record = function Record(first, last, age){
+var Record = function Record(first, last, age, gender, major){
     this.firstname = first;
     this.lastname = last;
     this.age = age;
+    this.gender = gender;
+    this.major = major;
 };
 
-var record1 = new Record("Cristian", "Ventura", "22"),
-    record2 = new Record("Joe", "Rogan", "34");
+var record1 = new Record("Cristian", "Ventura", "22", "male", "Computer Science"),
+    record2 = new Record("Joe", "Rogan", "34", "male", "Biology");
 
 allRecords.push(record1);
 allRecords.push(record2);
