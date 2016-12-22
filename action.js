@@ -9,7 +9,7 @@ var addBtn = document.getElementById("addBtn"),
     displaySearch = document.getElementById("displaySearch"),
     searchId =  document.getElementById("searchId"),
     display = document.getElementById("display-records"),
-    recordTemplate = "<td>~firstName~</td><td>{{lastName}}</td>";
+    recordTemplate = "<tr><td>{{id}}</td><td>{{firstName}}</td><td>{{lastName}}</td><td>{{age}}</td><td>{{gender}}</td><td>{{major}}</td></tr>";
 
 var allRecords = [],
     id = 0;
@@ -42,13 +42,13 @@ var output = function output1(type){
     }
     */
 
-
     if(type === 0){
         for (var x = 0; x < allRecords.length; x++){
-            var curRec = allRecords[x];
-        display.innerHTML += "<tr><td>" + allRecords[x].idNum + td + allRecords[x].firstname + 
-            td + allRecords[x].lastname + td + allRecords[x].age + td + allRecords[x].gender + td + allRecords[x].major + "<\/tr>";
-            //display.innerHTML += recordTemplate.replace("{{firstName}}", allRecords[x].firstname).replace("{{lastname}}",allRecords[x].lastname);
+            var allR = allRecords[x];
+        //display.innerHTML += "<tr><td>" + allRecords[x].idNum + td + allRecords[x].firstname + 
+           // td + allRecords[x].lastname + td + allRecords[x].age + td + allRecords[x].gender + td + allRecords[x].major + "<\/tr>";
+            display.innerHTML += recordTemplate.replace("{{id}}", allRecords[x].idNum).replace("{{firstName}}", allRecords[x].firstname).replace("{{lastName}}",allRecords[x].lastname)
+            .replace("{{age}}", allRecords[x].age).replace("{{gender}}", allRecords[x].gender).replace("{{major}}", allRecords[x].major);
 };
     } else if (type === 1){
          for (var x = allRecords.length - 1; x < allRecords.length; x++){
