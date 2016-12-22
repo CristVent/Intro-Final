@@ -12,16 +12,16 @@
 <main>
 
 <div id="allRecords">
-<h3> Records </h3>
+<h3> Student Records </h3>
 <table class="table table-striped">
     <thead>
       <tr>
+        <th>ID</th>
         <th>Firstname</th>
         <th>Lastname</th>
         <th>Age</th>
         <th>Gender</th>
         <th>Major</th>
-        <th>Modify</th>
       </tr>
     </thead>
     <tbody id="display-records">
@@ -30,9 +30,10 @@
   </table>
   </div>
 
-<div id="addRecords">
-<h3> Add Records </h3>
-
+<div id="addRecords" class="contentArea">
+<button data-toggle="collapse" data-target="#open1" class="btn btn-primary btn-xs">Add Record</button>
+<div id="open1" class="collapse">
+  <h3> Add Record </h3>
   <div class="form-group">
     <label>Firstname:</label>
     <input type="text" class="form-control" id="firstname">
@@ -47,15 +48,32 @@
   </div>
   <div class="form-group">
     <label>Gender:</label>
-    <input type="text" class="form-control" id="age">
+    <input type="text" class="form-control" id="gender">
   </div>
   <div class="form-group">
     <label>Major:</label>
-    <input type="text" class="form-control" id="age">
+    <input type="text" class="form-control" id="major">
   </div>
-  <button type="submit" class="btn btn-xs btn-success" id="add"> Add </button>
+  <button type="submit" class="btn btn-xs btn-success" id="addBtn"> Add </button>
+  </div> 
+</div>
 
-      
+<div id="deleteRecords" class="contentArea">
+<button data-toggle="collapse" data-target="#open2" class="btn btn-primary btn-xs">Delete Record</button>
+<div id="open2" class="collapse">
+<h3> Delete Records </h3>
+<div class="input-group">
+    <input type="text" class="form-control" placeholder="Search with record ID" id="searchId">
+    <div class="input-group-btn">
+      <button class="btn btn-danger"  id="searchBtn"> Delete </button>
+    </div>
+</div>
+
+<div id="displaySearch">
+
+
+</div>
+</div>
 </div>
 
 </main>
