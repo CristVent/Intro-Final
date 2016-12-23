@@ -3,7 +3,6 @@
     <head>
         <title> Web Intro - Final </title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <link href="custom.css" rel="stylesheet">
     </head>
 
@@ -21,7 +20,7 @@
         <th>Lastname</th>
         <th>Age</th>
         <th>Gender</th>
-        <th>Major</th>
+        <th>Year</th>
       </tr>
     </thead>
     <tbody id="display-records">
@@ -51,7 +50,7 @@
     <input type="text" class="form-control" id="gender">
   </div>
   <div class="form-group">
-    <label>Major:</label>
+    <label>Year:</label>
     <input type="text" class="form-control" id="major">
   </div>
   <button type="submit" class="btn btn-xs btn-success" id="addBtn"> Add </button>
@@ -61,23 +60,19 @@
 <div id="deleteRecords" class="contentArea">
 <button data-toggle="collapse" data-target="#open2" class="btn btn-primary btn-xs">Delete Record</button>
 <div id="open2" class="collapse">
-<h3> Delete Records </h3>
+<h3> Delete Record </h3>
 <div class="input-group">
-    <input type="text" class="form-control" placeholder="Search with record ID" id="searchId">
+    <input type="text" class="form-control" placeholder="Input record ID to delete" id="searchId">
     <div class="input-group-btn">
       <button class="btn btn-danger"  id="searchBtn"> Delete </button>
     </div>
-</div>
-
-<div id="displaySearch">
-
-
 </div>
 </div>
 </div>
 
 </main>
-<script src="action.js"> </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="action.js"> </script>
 </body>
 </html>
