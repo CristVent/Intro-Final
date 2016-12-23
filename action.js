@@ -40,8 +40,9 @@ var output = function output1(type){
     };
     for(var x = startIndex; x < allRecords.length; x++){
         var allRec = allRecords[x];
-        display.innerHTML += recordTemplate.replace("{{id}}", allRecords[x].idNum).replace("{{firstName}}", allRecords[x].firstname).replace("{{lastName}}",allRecords[x].lastname)
-        .replace("{{age}}", allRecords[x].age).replace("{{gender}}", allRecords[x].gender).replace("{{year}}", allRecords[x].year);
+        display.innerHTML += recordTemplate.replace("{{id}}", allRecords[x].idNum).replace("{{firstName}}", allRecords[x].firstname)
+        .replace("{{lastName}}",allRecords[x].lastname).replace("{{age}}", allRecords[x].age).replace("{{gender}}", allRecords[x].gender)
+        .replace("{{year}}", allRecords[x].year);
     }
 };
 
