@@ -31,7 +31,6 @@ allRecords.push(new Record("Cristian", "Ventura", "22", "male", "Senior"));
 allRecords.push(new Record("Joe", "Brown", "23", "male", "Junior"));
 allRecords.push(new Record("Rose", "Norton", "21", "female", "Freshmen"));
 
-
 // All output to the table data will be processed
 var output = function output1(type){
     var startIndex = 0;
@@ -52,10 +51,10 @@ output();
 // New record/ object will be created on button click
 addBtn.addEventListener("click", function test(){
    allRecords.push( new Record(first.value, last.value, age.value, gender.value, major.value)); 
-   output(add);
+   output("add");
 });
 
-// Record/ object will a deleted on button click
+// Record/ object will a deleted on button click 
 var deleteBtn = document.getElementsByClassName("deleteBtn");
 searchBtn.addEventListener("click", function deleting(){
     var searchIdValue = parseInt(searchId.value);
